@@ -1,0 +1,14 @@
+{
+  "name": "CRUD-NodeJS-Express",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/Sun7-Green-IT/CRUD-NodeJS-Express.git",
+  "author": "Netoun <coulonnier.nicolas.44@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
