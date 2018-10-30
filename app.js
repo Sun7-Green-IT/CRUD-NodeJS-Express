@@ -20,7 +20,6 @@ app.get('/users', (req, res) => {
   pool.query('SELECT * FROM users')
     .then(rep => {
       console.log(rep)
-      pool.end()
       res.send(rep)
     })
     .catch(e => console.error(e.stack))
