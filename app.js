@@ -19,12 +19,11 @@ app.get('/', (req, res) => {
 app.get('/users', (req, res) => {
   pool.query('SELECT * FROM users')
     .then(rep => {
-      console.log(rep)
       res.send(rep)
     })
     .catch(e => console.error(e.stack))
 })
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log('Example app listening on port 3000!')
+
 })
