@@ -1,15 +1,23 @@
 {
   "name": "CRUD-NodeJS-Express",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "repository": "https://github.com/Sun7-Green-IT/CRUD-NodeJS-Express.git",
   "author": "Netoun <coulonnier.nicolas.44@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "watch": "webpack --watch --mode development",
+    "start": "nodemon dist/main.js",
+    "build": "webpack --mode production"
   },
   "dependencies": {
+    "common-env": "^6.3.0",
     "express": "^4.16.3",
     "pg": "^7.6.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
