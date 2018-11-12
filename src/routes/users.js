@@ -7,12 +7,14 @@ import {
 } from '../utils/recover'
 
 export const users = (req, res) => {
+
   const reply = recover(
     executeSql(database, 'SELECT * FROM users', []),
-    res => res,
+    rep => {
+      res.json(rep)
+    },
     err => {
       return err
     }
   )
-  res.json(reply)
 }

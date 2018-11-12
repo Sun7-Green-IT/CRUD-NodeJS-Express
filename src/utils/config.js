@@ -8,10 +8,10 @@ export const config = env().getOrElseAll({
     port: 3001
   },
   postgres: {
-    user: 'green_it',
+    user: 'postgres',
     host: 'localhost',
     database: 'postgres',
-    password: 'p@ssword',
+    password: 'boston',
     port: 5432
   }
 })
