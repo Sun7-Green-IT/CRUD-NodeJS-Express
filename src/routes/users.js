@@ -9,12 +9,13 @@ import {
 export const users = (req, res) => {
 
   const reply = recover(
-    executeSql(database, 'SELECT * FROM users', []),
+    executeSql(database, 'SELECT * FROM public."user"', []),
     rep => {
-      res.json(rep)
+      console.log('rep : ', rep)
+      res.send(rep)
     },
     err => {
-      return err
+      res.send(err)
     }
   )
 }
