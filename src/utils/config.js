@@ -9,7 +9,7 @@ export const config = env().getOrElseAll({
   },
   postgres: {
     user: 'green_it',
-    host: 'localhost',
+    host: '127.0.0.1',
     database: 'green_it',
     password: 'Sun7-Password',
     port: 5432
