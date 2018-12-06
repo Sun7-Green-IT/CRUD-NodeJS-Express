@@ -21,7 +21,7 @@ export default function start() {
   server.use('/', routes);
 
   server.listen(config.express.port, () => {
-    console.log('Listening')
+    console.log(config.express.port)
   })
 
   return server

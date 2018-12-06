@@ -1,12 +1,14 @@
-const recursive_fibonnaci = (num, memo) => {
-  memo = memo || {};
-  console.log(memo)
-  if (memo[num]) return memo[num];
-  if (num <= 1) return 1;
-
-  return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
+const recursive_fibonnaci = (n) => {
+  if (n === 1) {
+    return [0, 1]
+  } else {
+    const s = recursive_fibonnaci(n - 1)
+    s.push(s[s.length - 1] + s[s.length - 2])
+    return s
+  }
 }
 
 export const fibonnaci = (req, res) => {
+  console.log("ok")
   res.json(recursive_fibonnaci(req.params.number))
 }
