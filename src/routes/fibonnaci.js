@@ -1,6 +1,6 @@
 const recursive_fibonnaci = (num, memo) => {
   memo = memo || {};
-
+  console.log(memo)
   if (memo[num]) return memo[num];
   if (num <= 1) return 1;
 
