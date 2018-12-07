@@ -14,5 +14,4 @@ router.route('/').get(hello)
 router.route('/users').get(users)
 router.route('/fibonnaci/:number').get(fibonnaci)
 
-
 export default router
